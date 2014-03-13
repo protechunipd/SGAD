@@ -28,7 +28,7 @@ The server it's written with the Scala language, while the client is written in 
 
 One of the problems of a social game resides on the heavy usage of a database to mantain all the data always updated.  
 That's why we opted for a [Akka](http://akka.io/)'s actor based paradigm.  
-What we obtained was an extremely lightweight web-based game, and ready to be deployed on a distributed architecture!  
+What we obtained was an extremely lightweight web-based game (we are talking about 10.000 users every 100MB of RAM!!!), and ready to be deployed on a distributed architecture!  
   
 The HTTP Server is based on [spray](http://spray.io/), and to store user data we choose a [MongoDB](https://www.mongodb.org/) database.  
   
