@@ -32,6 +32,11 @@ What we obtained was an extremely lightweight and distributed web-based game!
 
 ===
 
-It's composed of the source codes for the server, the source codes for the client and some documentation (in italian language), partially related to the teaching and not interesting by most of the users.  
+In this repository you will find the source codes for the server, the source codes for the client and some documentation (in italian language), partially related to the teaching and not interesting by most of the users.  
 
 The installation instructions are in the /Documenti/Manuale_Di_Installazione.pdf document.
+
+===
+
+##LICENCE
+ALL the files are released under licence Apache v2.
