@@ -7,10 +7,10 @@ A Social Game based on a Distributed Architecture
 ===
 
 #ProtechGroup
-##Members:
-###Battistella Stefano
-###Biancucci Maurizio
-###Gallo Francesco
-###Gatto Francesco
-###Nessi Alberto
-###Segantin Fabio
+Members:  
+Battistella Stefano  
+Biancucci Maurizio  
+Gallo Francesco  
+Gatto Francesco  
+Nessi Alberto  
+Segantin Fabio  
