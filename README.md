@@ -8,12 +8,12 @@ A Social Game based on a Distributed Architecture
 
 ##ProtechGroup
 Members:  
-Battistella Stefano  
-Biancucci Maurizio  
-Gallo Francesco  
-Gatto Francesco  
-Nessi Alberto  
-Segantin Fabio  
+- Battistella Stefano  
+- Biancucci Maurizio  
+- Gallo Francesco  
+- Gatto Francesco  
+- Nessi Alberto  
+- Segantin Fabio  
 
 ===
 
@@ -24,4 +24,6 @@ This project was commissioned by [FunGo Studios](http://www.fungostudios.com), b
 
 ===
 
-It's composed of the source codes for the server, the source codes for the client and some documentation (in italian language), partially related to the teaching and not interesting by most of the users.
+It's composed of the source codes for the server, the source codes for the client and some documentation (in italian language), partially related to the teaching and not interesting by most of the users.  
+
+The installation instructions are in the /Documenti/Manuale_Di_Installazione/Manuale_Di_Installazione.pdf document.
