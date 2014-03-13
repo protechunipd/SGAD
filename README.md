@@ -20,7 +20,7 @@ Members:
 ##What is this?
 
 As the title says, it's basically a Social Game based on a Distributed Architecture.  
-This project was commissioned by [FunGo Studios](http://www.fungostudios.com), but it was part of the Software Engineering teaching course held in University of Padua.
+This project was commissioned by [FunGo Studios](http://www.fungostudios.com), but it was part of the [Computer Science](http://informatica.math.unipd.it/index.html)'s [Software Engineering teaching course](http://www.math.unipd.it/~tullio/IS-1/2013/) held in [University of Padua](http://www.unipd.it/).
 
 The server it's written with the Scala language, while the client is written in Javascript.
 
