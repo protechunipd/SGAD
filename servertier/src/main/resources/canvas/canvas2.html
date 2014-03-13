@@ -1,0 +1,46 @@
+</script>
+	<script>window.onload = function() {
+		var canvas = document.getElementById("context1");
+		var ctx = canvas.getContext("2d");
+		var bound = Bound.getInstance();
+		bound.setWidth(window.innerWidth);
+		bound.setHeight(window.innerHeight);
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		var context = Context.getInstance();
+		context.setDrawArea(ctx);
+		canvas.onclick = function() {
+			context.onClick();
+		};
+		canvas.oncontextmenu = function() {
+			context.onRightClick();
+			return false;
+		};
+		canvas.ondragstart = function() {
+			context.onDragStart();
+		};
+		canvas.ondrag = function() {
+			context.onDrag();
+		};
+		canvas.ondragend = function() {
+			context.onDragEnd();
+		};
+		var requestLoadGlobalData = new RequestLoadGeneralData();
+		requestLoadGlobalData.performAction();
+		context.startDraw();
+		};
+	</script>
+	<style>
+	*{padding: 0px;
+	margin: 0px;}
+	body{width: 100%;
+	height: 100%;
+	overflow: hidden;}
+        .startDrag {
+            cursor: -webkit-grab;
+        }
+	</style>
+</head>
+<body><canvas id="context1" draggable="true"></canvas>
+<div id="testarea"></div></body>
+</html>
