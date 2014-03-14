@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'"/>
+    <meta http-equiv="Content-Language" content="it" /> 
+    <title>Chi siamo - SGAD - Browser game</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link href="css/mob.css" rel="stylesheet" type="text/css" media="only screen and (max-width:749px)"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="only screen and (min-width:750px)"/>
+    <link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
+    <!--[if lt IE 9]>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+</head>
+
+<body>
+
+<div id="container">
+    <div id="header"><img src="images/Logo.png" height="100" width="270" alt="SGAD Browser Game"/></div>
+    <div id="navbar">
+        <a class="aiutinavigazione" href="#maincontent">Vai al Contenuto</a>
+        <a class="aiutinavigazione" href="#form_login">Vai al <span xml:lang="en">Login</span></a>
+        <ul>
+            <li>
+                <div class="button_wrapper" onclick="this.getElementsByTagName('a')[0].click()">
+                    <div class="top_button">
+                        <div class="top_left_button"></div>
+                        <div class="top_right_button"></div>
+                    </div>
+                    <div class="middle_button">
+                        <div class="middle_button_container">
+                            <div class="button_left"></div>
+                            <div class="button_center"><span xml:lang="en"><a href="./">Home</a></span></div>
+                            <div class="button_right"></div>
+                        </div>
+                    </div>
+                    <div class="bottom_button">
+                        <div class="bottom_left_button"></div>
+                        <div class="bottom_right_button"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="button_wrapper" onclick="this.getElementsByTagName('a')[0].click()">
+                    <div class="top_button">
+                        <div class="top_left_button"></div>
+                        <div class="top_right_button"></div>
+                    </div>
+                    <div class="middle_button">
+                        <div class="middle_button_container">
+                            <div class="button_left"></div>
+                            <div class="button_center"><a href="./manualgeneral.html">Manuale</a></div>
+                            <div class="button_right"></div>
+                        </div>
+                    </div>
+                    <div class="bottom_button">
+                        <div class="bottom_left_button"></div>
+                        <div class="bottom_right_button"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="selected">
+                <div class="button_wrapper">
+                    <div class="top_button">
+                        <div class="top_left_button"></div>
+                        <div class="top_right_button"></div>
+                    </div>
+                    <div class="middle_button">
+                        <div class="middle_button_container">
+                            <div class="button_left"></div>
+                            <div class="button_center">Chi siamo</div>
+                            <div class="button_right"></div>
+                        </div>
+                    </div>
+                    <div class="bottom_button">
+                        <div class="bottom_left_button"></div>
+                        <div class="bottom_right_button"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="button_wrapper">
+                    <div class="top_button">
+                        <div class="top_left_button"></div>
+                        <div class="top_right_button"></div>
+                    </div>
+                    <div class="middle_button">
+                        <div class="middle_button_container">
+                            <div class="button_left"></div>
+                            <div class="button_center"><a href="./tracker.html">Segnalazione <span xml:lang="en">Bug</span></a></div>
+                            <div class="button_right"></div>
+                        </div>
+                    </div>
+                    <div class="bottom_button">
+                        <div class="bottom_left_button"></div>
+                        <div class="bottom_right_button"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="register">
+        <div id="register_panel_top"></div>
+        <form id="form_login" action="./login" method="post" onsubmit="checkLogin()">
+			<ul>
+                <li>
+                    <label id="label_log_user" class="form_label" for="log_username">Nome utente:</label>
+                    <input id="log_username" class="log_form" name="user" type="text"/>
+                </li>
+                <li>
+                    <label id="label_log_password" class="form_label" for="log_password" xml:lang="en">Password:</label>
+                    <input id="log_password" class="log_form" name="password" type="password"/>
+                </li>
+                <li>
+                    <div id="login_errato" class="error">I dati di <span xml:lang="en">login</span> sono errati.</div>
+                    <div id="login_user_wrapper" xml:lang="en" onclick="this.getElementsByTagName('a')[0].click()">
+                        <input type="submit" id="login_user" value="Login" xml:lang="en"/>
+                    </div>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div id="content">
+        <div id="content_top"></div>
+        <div id="maincontent">
+            <div id="left_maincontent">
+            </div>
+            <div id="inner_maincontent">
+                <div id="text_content">
+                    <h1><img xml:lang="en" src="images/ProTech_Logo.png" alt="Protech"/></h1>
+
+                    <p>Il gruppo <span xml:lang="en">ProTech</span> &egrave; un team di sviluppo creato appositamente
+                        per la creazione del progetto <acronym
+                                title="Social Game ad Architettura Distribuita">SGAD</acronym>. Quest'ultimo &egrave; un
+                        progetto didattico relativo all'insegnamento <a
+                                href="http://www.math.unipd.it/~tullio/IS-1/2013/"
+                                title="Sito relativo all'insegnamento">Ingegneria del <span
+                                xml:lang="en">Software</span></a> contenuto all'interno del <a
+                                href="http://informatica.math.unipd.it/" title="Sito esterno del Corso di Laurea">Corso
+                            di Laurea in Informatica</a> dell'<a href="http://www.unipd.it/"
+                                                                 title="Sito esterno dell'universit&agrave;">universit&agrave;
+                            di Padova.</a></p>
+
+                    <p>Il gruppo &egrave; composto da sei componenti: Battistella Stefano, Biancucci Maurizio, Gallo
+                        Francesco, Gatto Francesco, Nessi Alberto e Segantin Fabio.</p>
+
+                    <h2>Il Progetto <acronym title="Social Game ad Architettura Distribuita">SGAD</acronym></h2>
+
+                    <p>Questo progetto nasce dalla necessit&agrave; da parte di <span xml:lang="en"><a
+                            href="http://www.fungostudios.com/" title="Sito esterno Proponente">FunGo Studios <abbr
+                            title="Societ&agrave; a responsabilità limitata">S.r.l.</abbr></a></span> di creare un <span
+                            xml:lang="en">Browser Game</span> con una architettura altamente distribuita.</p>
+
+                    <p>Tutto ci&ograve; &egrave; stato ottenuto tramite l'utilizzo del linguaggio di programmazione
+                        <span xml:lang="en"><a href="http://www.scala-lang.org/" title="Sito esterno del linguaggio">Scala</a></span>
+                        con il <span xml:lang="en">framework <a href="http://akka.io/"
+                                                                title="Sito Esterno del Framework">Akka</a></span>.</p>
+                </div>
+            </div>
+            <div id="right_maincontent">
+            </div>
+        </div>
+    </div>
+    <div id="footer" xml:lang="en">
+        <p>
+            Copyright &copy; 2013-2014 by ProTech
+        </p>
+
+        <p>
+            All rights reserved
+        </p>
+    </div>
+</div>
+</body>
+</html>

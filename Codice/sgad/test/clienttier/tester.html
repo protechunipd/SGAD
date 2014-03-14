@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit basic example</title>
+    <link rel="stylesheet" href="resources/qunit-1.14.0.css">
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<script src="../../clienttier/jquery.js"></script>
+
+<script src="../../clienttier/model/observer/Observable.js"></script>
+<script src="../../clienttier/model/observer/Observer.js"></script>
+<script src="../../clienttier/model/generaldata/Cost.js"></script>
+<script src="../../clienttier/model/generaldata/Bonus.js"></script>
+<script src="../../clienttier/model/generaldata/ProductedResource.js"></script>
+<script src="../../clienttier/model/generaldata/QuantityResource.js"></script>
+<script src="../../clienttier/model/generaldata/Resource.js"></script>
+<script src="../../clienttier/model/generaldata/DataFactory.js"></script>
+<script src="../../clienttier/model/generaldata/BuildingWithLevel.js"></script>
+<script src="../../clienttier/model/generaldata/Unit.js"></script>
+<script src="../../clienttier/model/personaldata/BuildingPossession.js"></script>
+<script src="../../clienttier/model/personaldata/AuthenticationData.js"></script>
+<script src="../../clienttier/model/personaldata/OwnedResource.js"></script>
+<script src="../../clienttier/model/personaldata/Position.js"></script>
+<script src="../../clienttier/model/personaldata/UnitPossession.js"></script>
+<script src="../../clienttier/model/personaldata/UnitInProgress.js"></script>
+<script src="../../clienttier/model/personaldata/UserData.js"></script>
+<script src="../../clienttier/model/userdatamanager/UserDataManager.js"></script>
+
+<script src="../../clienttier/view/commands/Command.js"></script>
+<script src="../../clienttier/view/commands/Click.js"></script>
+<script src="../../clienttier/view/commands/RightClick.js"></script>
+<script src="../../clienttier/view/commands/DragAndDrop.js"></script>
+<script src="../../clienttier/view/commands/Resize.js"></script>
+<script src="../../clienttier/view/context/Context.js"></script>
+<script src="../../clienttier/view/graphicobjects/point/Point2D.js"></script>
+<script src="../../clienttier/view/graphicobjects/shape/Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/graphicobject/GraphicObject.js"></script>
+<script src="../../clienttier/view/graphicobjects/widget/Widget.js"></script>
+<script src="../../clienttier/view/graphicobjects/widget/ImageWidget.js"></script>
+<script src="../../clienttier/view/graphicobjects/widget/FrameWidget.js"></script>
+<script src="../../clienttier/view/graphicobjects/widget/TextWidget.js"></script>
+<script src="../../clienttier/view/graphicobjects/widget/ButtonWidget.js"></script>
+<script src="../../clienttier/view/graphicobjects/collection/Collection.js"></script>
+<script src="../../clienttier/view/graphicobjects/collection/Iterator.js"></script>
+<script src="../../clienttier/view/graphicobjects/collection/GraphicObjectCollection.js"></script>
+<script src="../../clienttier/view/graphicobjects/collection/GraphicObjectIterator.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponent/WorldComponent.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponent/TileComponent.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponent/BuildingComponent.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WorldComponentShapeImg.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/BarracksL1Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/BarracksL2Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/BarracksL3Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/InConstructionShape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/MineL1Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/MineL2Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/MineL3Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/SchoolOfMagicL1Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/SchoolOfMagicL2Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/SchoolOfMagicL3Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/StableL1Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/StableL2Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/StableL3Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/TileShape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WizardTowerL1Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WizardTowerL2Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WizardTowerL3Shape.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WorldComponentShapeFactory.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/filter/GraphicFilter.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/filter/VoidFilter.js"></script>
+<script src="../../clienttier/view/graphicobjects/components/filter/BuildModeFilter.js"></script>
+<script src="../../clienttier/view/graphicobjects/bound/Bound.js"></script>
+
+<script src="../../clienttier/controller/requester/AJAXRequester.js"></script>
+<script src="../../clienttier/controller/messageinterpreter/MessageInterpreter.js"></script>
+<script src="../../clienttier/controller/actions/Action.js"></script>
+<script src="../../clienttier/controller/actions/ActionListener.js"></script>
+<script src="../../clienttier/controller/actions/BackToVillage.js"></script>
+<script src="../../clienttier/controller/actions/BuildConstruction.js"></script>
+<script src="../../clienttier/controller/actions/ChangePasswordAction.js"></script>
+<script src="../../clienttier/controller/actions/CloseContextualMenu.js"></script>
+<script src="../../clienttier/controller/actions/DeleteAccountAction.js"></script>
+<script src="../../clienttier/controller/actions/DemolishBuilding.js"></script>
+<script src="../../clienttier/controller/actions/DismissUnits.js"></script>
+<script src="../../clienttier/controller/actions/EnableRightClick.js"></script>
+<script src="../../clienttier/controller/actions/HarvestResources.js"></script>
+<script src="../../clienttier/controller/actions/LoadAnotherUser.js"></script>
+<script src="../../clienttier/controller/actions/LoadGeneralData.js"></script>
+<script src="../../clienttier/controller/actions/LoadPersonalData.js"></script>
+<script src="../../clienttier/controller/actions/Logout.js"></script>
+<script src="../../clienttier/controller/actions/ReloadPageAction.js"></script>
+<script src="../../clienttier/controller/actions/RemoveGraphicObjectAction.js"></script>
+<script src="../../clienttier/controller/actions/RequestAttackUser.js"></script>
+<script src="../../clienttier/controller/actions/RequestBuildConstruction.js"></script>
+<script src="../../clienttier/controller/actions/RequestChangePassword.js"></script>
+<script src="../../clienttier/controller/actions/RequestDeleteAccount.js"></script>
+<script src="../../clienttier/controller/actions/RequestDemolishBuilding.js"></script>
+<script src="../../clienttier/controller/actions/RequestDismissUnits.js"></script>
+<script src="../../clienttier/controller/actions/RequestHarvestResources.js"></script>
+<script src="../../clienttier/controller/actions/RequestLoadGeneralData.js"></script>
+<script src="../../clienttier/controller/actions/RequestLoadPersonalData.js"></script>
+<script src="../../clienttier/controller/actions/RequestStoleResources.js"></script>
+<script src="../../clienttier/controller/actions/RequestTrainUnits.js"></script>
+<script src="../../clienttier/controller/actions/RequestUpgradeBuilding.js"></script>
+<script src="../../clienttier/controller/actions/RequestUserList.js"></script>
+<script src="../../clienttier/controller/actions/SetAllVoidFilter.js"></script>
+<script src="../../clienttier/controller/actions/SetBuildModeFilter.js"></script>
+<script src="../../clienttier/controller/actions/ShowAccountDeletedMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowAccountManagerMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowAnotherUserMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowAttackMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowAttackResultMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowBuildConstructionMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowBuildingContextualMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowDemolishMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowDismissUnitMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowInteractionMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowOperationFailureMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowPasswordChangedMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowResourceMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowTileContextualMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowTrainUnitMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowUnitSelectionMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowUpgradeMenu.js"></script>
+<script src="../../clienttier/controller/actions/ShowUserListMenu.js"></script>
+<script src="../../clienttier/controller/actions/StealResources.js"></script>
+<script src="../../clienttier/controller/actions/TrainUnit.js"></script>
+<script src="../../clienttier/controller/actions/UpgradeBuilding.js"></script>
+<script src="../../clienttier/controller/backupmanager/BackupManager.js"></script>
+<script src="../../clienttier/controller/menufactory/MenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/AccountManagerMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/AnotherUserMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/AttackResultMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/NotifyMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/LogMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/BuildingContextualMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/TileContextualMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/ConfirmMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/NotifyMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/ResourceMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/InteractionMenuFactory.js"></script>
+<script src="../../clienttier/controller/menufactory/UnitSelectionMenu.js"></script>
+<script src="../../clienttier/controller/menufactory/UserListMenuFactory.js"></script>
+
+<script src="resources/qunit-1.14.0.js"></script>
+<script src="resources/qunit-reporter-junit.js"></script>
+
+<script src="model/generaldata/resource/tests.js"></script>
+<script src="model/generaldata/cost/tests.js"></script>
+<script src="model/generaldata/bonus/tests.js"></script>
+<script src="model/generaldata/datafactory/tests.js"></script>
+<script src="model/generaldata/buildingwithlevel/tests.js"></script>
+<script src="model/generaldata/unit/tests.js"></script>
+<script src="model/generaldata/quantityresource/tests.js"></script>
+<script src="model/generaldata/productedresource/tests.js"></script>
+<script src="model/personaldata/position/tests.js"></script>
+<script src="model/personaldata/authenticationdata/tests.js"></script>
+<script src="model/personaldata/buildingpossession/tests.js"></script>
+<script src="model/personaldata/ownedresource/tests.js"></script>
+<script src="model/personaldata/unitinprogress/tests.js"></script>
+<script src="model/personaldata/unitpossession/tests.js"></script>
+<script src="model/personaldata/userdata/tests.js"></script>
+<script src="model/userdatamanager/tests.js"></script>
+<script src="view/context/tests.js"></script>
+<script src="view/graphicobjects/bound/tests.js"></script>
+<script src="view/graphicobjects/graphicobject/tests.js"></script>
+<script src="view/graphicobjects/collection/tests.js"></script>
+<script src="view/graphicobjects/point/tests.js"></script>
+<script src="view/graphicobjects/shape/tests.js"></script>
+<script src="view/graphicobjects/components/worldcomponent/buildingcomponent/tests.js"></script>
+<script src="view/graphicobjects/components/worldcomponent/tilecomponent/tests.js"></script>
+<script src="view/graphicobjects/components/worldcomponentshape/WorldComponentShapeImg/tests.js"></script>
+<script src="view/graphicobjects/components/worldcomponentshape/WorldComponentShapeFactory/tests.js"></script>
+<script src="view/graphicobjects/components/worldcomponentshape/WizardTowerL1Shape/tests.js"></script>
+<!--<script src="view/graphicobjects/components/filter/BuildModeFilter/tests.js"></script>-->
+<!--<script src="view/graphicobjects/components/filter/VoidFilter/tests.js"></script>-->
+<!--<script src="view/graphicobjects/widget/FrameWidget/tests.js"></script>-->
+<script src="view/graphicobjects/widget/ButtonWidget/tests.js"></script>
+<script src="view/graphicobjects/widget/TextWidget/tests.js"></script>
+<script src="view/graphicobjects/widget/ImageWidget/tests.js"></script>
+<script src="view/graphicobjects/widget/Widget/tests.js"></script>
+<script src="controller/backupmanager/tests.js"></script>
+<script src="controller/messageinterpreter/tests.js"></script>
+<script src="controller/menufactory/accountmanagermenufactory/tests.js"></script>
+<script src="controller/menufactory/anotherusermenufactory/tests.js"></script>
+<script src="controller/menufactory/attackresultmenufactory/tests.js"></script>
+<script src="controller/menufactory/buildingcontextualmenufactory/tests.js"></script>
+<script src="controller/menufactory/confirmmenufactory/tests.js"></script>
+<script src="controller/menufactory/interactionmenufactory/tests.js"></script>
+<script src="controller/menufactory/notifymenufactory/tests.js"></script>
+<script src="controller/menufactory/resourcemenufactory/tests.js"></script>
+<script src="controller/menufactory/tilecontextualmenufactory/tests.js"></script>
+<script src="controller/menufactory/unitselectionmenu/tests.js"></script>
+<script src="controller/menufactory/userlistmenufactory/tests.js"></script>
+<script src="controller/actions/actionlistener/tests.js"></script>
+<script src="controller/actions/backtovillage/tests.js"></script>
+<!--<script src="controller/actions/buildconstruction/tests.js"></script>-->
+<script src="controller/actions/changepasswordaction/tests.js"></script>
+<script src="controller/actions/closecontextualmenu/tests.js"></script>
+<script src="controller/actions/deleteaccountaction/tests.js"></script>
+<script src="controller/actions/demolishbuilding/tests.js"></script>
+<script src="controller/actions/dismissunits/tests.js"></script>
+<script src="controller/actions/enablerightclick/tests.js"></script>
+<script src="controller/actions/harvestresources/tests.js"></script>
+<!--<script src="controller/actions/loadanotheruser/tests.js"></script>-->
+<script src="controller/actions/loadgeneraldata/tests.js"></script>
+<script src="controller/actions/loadpersonaldata/tests.js"></script>
+<!--<script src="controller/actions/logout/tests.js"></script>-->
+<!--<script src="controller/actions/reloadpageaction/tests.js"></script>-->
+<script src="controller/actions/requestattackuser/tests.js"></script>
+<script src="controller/actions/requestbuildconstruction/tests.js"></script>
+<script src="controller/actions/requestchangepassword/tests.js"></script>
+<script src="controller/actions/requestdeleteaccount/tests.js"></script>
+<script src="controller/actions/requestdemolishbuilding/tests.js"></script>
+<script src="controller/actions/requestdismissunits/tests.js"></script>
+<script src="controller/actions/requestharvestresources/tests.js"></script>
+<script src="controller/actions/requestloadgeneraldata/tests.js"></script>
+<script src="controller/actions/requestloadpersonaldata/tests.js"></script>
+<script src="controller/actions/requesttrainunits/tests.js"></script>
+<script src="controller/actions/requestupgradebuilding/tests.js"></script>
+<script src="controller/actions/setallvoidfilter/tests.js"></script>
+<script src="controller/actions/setbuildmodefilter/tests.js"></script>
+<!-- <script src="controller/actions/showaccountdeletedmenu/tests.js"></script> -->
+<script src="controller/actions/showaccountmanagermenu/tests.js"></script>
+<script src="controller/actions/showanotherusermenu/tests.js"></script>
+<!--<script src="controller/actions/showattackmenu/tests.js"></script>-->
+<script src="controller/actions/showattackresultmenu/tests.js"></script>
+<script src="controller/actions/showbuildconstructionmenu/tests.js"></script>
+<!--<script src="controller/actions/showbuildingcontextualmenu/tests.js"></script>-->
+<script src="controller/actions/showdemolishmenu/tests.js"></script>
+<script src="controller/actions/showdismissunitmenu/tests.js"></script>
+<script src="controller/actions/showinteractionmenu/tests.js"></script>
+<script src="controller/actions/showoperationfailuremenu/tests.js"></script>
+<script src="controller/actions/showpasswordchangedmenu/tests.js"></script>
+<script src="controller/actions/showresourcemenu/tests.js"></script>
+<!--<script src="controller/actions/showtilecontextualmenu/tests.js"></script>-->
+<!--<script src="controller/actions/showtrainunitmenu/tests.js"></script>-->
+<script src="controller/actions/showunitselectionmenu/tests.js"></script>
+<script src="controller/actions/showupgrademenu/tests.js"></script>
+<script src="controller/actions/showuserlistmenu/tests.js"></script>
+<script src="controller/actions/stealresources/tests.js"></script>
+<!--<script src="controller/actions/trainunit/tests.js"></script>-->
+<script src="controller/actions/upgradebuilding/tests.js"></script>
+
+
+<script>
+    QUnit.jUnitReport = function(report) {
+        console.log(report.xml);
+    };
+</script>
+
+<style>
+    canvas {
+        background-color: rgb(74, 141, 42);
+    }
+</style>
+
+<canvas id = "context1"></canvas>
+<canvas id = "context2"></canvas>
+<canvas id = "context3"></canvas>
+<canvas id = "context4"></canvas>
+<canvas id = "context5"></canvas>
+<canvas id = "context6"></canvas>
+<canvas id = "context7"></canvas>
+<canvas id = "context8"></canvas>
+</body>
+</html>

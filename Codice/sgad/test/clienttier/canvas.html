@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SGAD</title>
+
+    <!-- InsertJSHere -->
+
+    <script src="../../clienttier/model/observer/Observable.js"></script>
+    <script src="../../clienttier/model/observer/Observer.js"></script>
+    <script src="../../clienttier/model/generaldata/Cost.js"></script>
+    <script src="../../clienttier/model/generaldata/Bonus.js"></script>
+    <script src="../../clienttier/model/generaldata/ProductedResource.js"></script>
+    <script src="../../clienttier/model/generaldata/QuantityResource.js"></script>
+    <script src="../../clienttier/model/generaldata/Resource.js"></script>
+    <script src="../../clienttier/model/generaldata/DataFactory.js"></script>
+    <script src="../../clienttier/model/generaldata/BuildingWithLevel.js"></script>
+    <script src="../../clienttier/model/generaldata/Unit.js"></script>
+    <script src="../../clienttier/model/personaldata/BuildingPossession.js"></script>
+    <script src="../../clienttier/model/personaldata/AuthenticationData.js"></script>
+    <script src="../../clienttier/model/personaldata/OwnedResource.js"></script>
+    <script src="../../clienttier/model/personaldata/Position.js"></script>
+    <script src="../../clienttier/model/personaldata/UnitPossession.js"></script>
+    <script src="../../clienttier/model/personaldata/UnitInProgress.js"></script>
+    <script src="../../clienttier/model/personaldata/UserData.js"></script>
+    <script src="../../clienttier/model/userdatamanager/UserDataManager.js"></script>
+
+    <script src="../../clienttier/view/commands/Command.js"></script>
+    <script src="../../clienttier/view/commands/Click.js"></script>
+    <script src="../../clienttier/view/commands/RightClick.js"></script>
+    <script src="../../clienttier/view/commands/DragAndDrop.js"></script>
+    <script src="../../clienttier/view/commands/Resize.js"></script>
+    <script src="../../clienttier/view/context/Context.js"></script>
+    <script src="../../clienttier/view/graphicobjects/point/Point2D.js"></script>
+    <script src="../../clienttier/view/graphicobjects/shape/Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/graphicobject/GraphicObject.js"></script>
+    <script src="../../clienttier/view/graphicobjects/widget/Widget.js"></script>
+    <script src="../../clienttier/view/graphicobjects/widget/ImageWidget.js"></script>
+    <script src="../../clienttier/view/graphicobjects/widget/FrameWidget.js"></script>
+    <script src="../../clienttier/view/graphicobjects/widget/TextWidget.js"></script>
+    <script src="../../clienttier/view/graphicobjects/widget/ButtonWidget.js"></script>
+    <script src="../../clienttier/view/graphicobjects/collection/Collection.js"></script>
+    <script src="../../clienttier/view/graphicobjects/collection/Iterator.js"></script>
+    <script src="../../clienttier/view/graphicobjects/collection/GraphicObjectCollection.js"></script>
+    <script src="../../clienttier/view/graphicobjects/collection/GraphicObjectIterator.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponent/WorldComponent.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponent/TileComponent.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponent/BuildingComponent.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WorldComponentShapeImg.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/BarracksL1Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/BarracksL2Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/BarracksL3Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/InConstructionShape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/MineL1Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/MineL2Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/MineL3Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/SchoolOfMagicL1Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/SchoolOfMagicL2Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/SchoolOfMagicL3Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/StableL1Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/StableL2Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/StableL3Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/TileShape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WizardTowerL1Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WizardTowerL2Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WizardTowerL3Shape.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/worldcomponentshape/WorldComponentShapeFactory.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/filter/GraphicFilter.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/filter/VoidFilter.js"></script>
+    <script src="../../clienttier/view/graphicobjects/components/filter/BuildModeFilter.js"></script>
+    <script src="../../clienttier/view/graphicobjects/bound/Bound.js"></script>
+
+    <script src="../../clienttier/controller/requester/AJAXRequester.js"></script>
+    <script src="../../clienttier/controller/messageinterpreter/MessageInterpreter.js"></script>
+    <script src="../../clienttier/controller/actions/Action.js"></script>
+    <script src="../../clienttier/controller/actions/ActionListener.js"></script>
+    <script src="../../clienttier/controller/actions/CloseContextualMenu.js"></script>
+    <script src="../../clienttier/controller/actions/LoadGeneralData.js"></script>
+    <script src="../../clienttier/controller/actions/LoadPersonalData.js"></script>
+    <script src="../../clienttier/controller/actions/ReloadPageAction.js"></script>
+    <script src="../../clienttier/controller/actions/SetBuildModeFilter.js"></script>
+    <script src="../../clienttier/controller/actions/SetAllVoidFilter.js"></script>
+    <script src="../../clienttier/controller/actions/RemoveGraphicObjectAction.js"></script>
+    <script src="../../clienttier/controller/actions/RequestLoadGeneralData.js"></script>
+    <script src="../../clienttier/controller/actions/RequestLoadPersonalData.js"></script>
+    <script src="../../clienttier/controller/actions/RequestUpgradeBuilding.js"></script>
+    <script src="../../clienttier/controller/actions/RequestDemolishBuilding.js"></script>
+    <script src="../../clienttier/controller/actions/RequestBuildConstruction.js"></script>
+    <script src="../../clienttier/controller/actions/RequestTrainUnits.js"></script>
+    <script src="../../clienttier/controller/actions/RequestAttackUser.js"></script>
+    <script src="../../clienttier/controller/actions/RequestHarvestResources.js"></script>
+    <script src="../../clienttier/controller/actions/RequestDismissUnits.js"></script>
+    <script src="../../clienttier/controller/actions/RequestChangePassword.js"></script>
+    <script src="../../clienttier/controller/actions/RequestDeleteAccount.js"></script>
+    <script src="../../clienttier/controller/actions/ShowBuildingContextualMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowTileContextualMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowOperationFailureMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowBuildConstructionMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowUpgradeMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowDemolishMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowResourceMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowInteractionMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowUnitSelectionMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowTrainUnitMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowUserListMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowAttackResultMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowAttackMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowAnotherUserMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowDismissUnitMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowAccountManagerMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowPasswordChangedMenu.js"></script>
+    <script src="../../clienttier/controller/actions/ShowAccountDeletedMenu.js"></script>
+    <script src="../../clienttier/controller/actions/UpgradeBuilding.js"></script>
+    <script src="../../clienttier/controller/actions/DemolishBuilding.js"></script>
+    <script src="../../clienttier/controller/actions/BuildConstruction.js"></script>
+    <script src="../../clienttier/controller/actions/HarvestResources.js"></script>
+    <script src="../../clienttier/controller/actions/TrainUnit.js"></script>
+    <script src="../../clienttier/controller/actions/EnableRightClick.js"></script>
+    <script src="../../clienttier/controller/actions/LoadAnotherUser.js"></script>
+    <script src="../../clienttier/controller/actions/BackToVillage.js"></script>
+    <script src="../../clienttier/controller/actions/StealResources.js"></script>
+    <script src="../../clienttier/controller/actions/Logout.js"></script>
+    <script src="../../clienttier/controller/actions/DismissUnits.js"></script>
+    <script src="../../clienttier/controller/actions/ChangePasswordAction.js"></script>
+    <script src="../../clienttier/controller/actions/DeleteAccountAction.js"></script>
+    <script src="../../clienttier/controller/backupmanager/BackupManager.js"></script>
+    <script src="../../clienttier/controller/menufactory/MenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/NotifyMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/BuildingContextualMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/TileContextualMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/ConfirmMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/ResourceMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/InteractionMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/UnitSelectionMenu.js"></script>
+    <script src="../../clienttier/controller/menufactory/UserListMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/AttackResultMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/AnotherUserMenuFactory.js"></script>
+    <script src="../../clienttier/controller/menufactory/AccountManagerMenuFactory.js"></script>
+
+    <script>window.onload = function () {
+        var canvas = document.getElementById("context1");
+        var ctx = canvas.getContext("2d");
+        var bound = Bound.getInstance();
+        bound.setWidth(window.innerWidth);
+        bound.setHeight(window.innerHeight);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var context = Context.getInstance();
+        context.setDrawArea(ctx);
+        canvas.onclick = function () {
+            context.onClick();
+        };
+        canvas.oncontextmenu = function () {
+            context.onRightClick();
+            return false;
+        };
+        canvas.ondragstart = function () {
+            canvas.className = "startDrag";
+            event.stopPropagation();
+            event.preventDefault();
+            context.onDragStart();
+        };
+        canvas.ondrag = function () {
+            event.stopPropagation();
+            event.preventDefault();
+            context.onDrag();
+        };
+        canvas.ondragend = function () {
+            event.target.className = "";
+            context.onDragEnd();
+        };
+        var requestLoadGlobalData = new RequestLoadGeneralData();
+        requestLoadGlobalData.performAction();
+        context.startDraw();
+    };
+    </script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .startDrag {
+            cursor: -webkit-grab;
+        }
+    </style>
+</head>
+<body>
+<canvas id="context1" draggable="true"></canvas>
+</body>
+</html>

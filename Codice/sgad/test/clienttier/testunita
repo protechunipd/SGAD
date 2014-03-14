@@ -1,0 +1,104 @@
+{Si verifica che vengono caricati correttamente i dati generali forniti in input al client.£LoadGeneralData.getResource()£LoadGeneralData.getUnit()£LoadGeneralData.getBuilding()}
+{Si verifica che vengano caricati correttamente i dati personali di ogni utente.£LoadPersonalData.setActionDatas()£UserDataManager.getBuildingPossession()£UserDataManager.getUnitPossession()}
+{Si verifica che venga eseguita correttamente l'azione di addestramento di nuove unità.£TrainUnit.performAction()}
+{Si verifica che il processo di conversione di un messaggio JSON avvenga correttamente.£MessageInterpreter.analyzeMessage()}
+{Si verifica che le comunicazioni asincrone tra server e client avvengano senza problemi.£AJAXRequester.sendRequest()£Action.getActionDatas()}
+{Si verifica che i dati dei Bonus vengano caricati correttamente.£Bonus.getBonusName()£Bonus.getBonusQuantity()£Bonus.getBonusType()}
+{Si verifica che i dati di un BuildingWithLevel vengano caricati correttamente.£BuildingWithLevel.getKey()£BuildingWithLevel.getNextLevelKey()£BuildingWithLevel.getBonus()£BuildingWithLevel.getgetCost()£BuildingWithLevel.getLevel()£BuildingWithLevel.getNameBuilding()£BuildingWithLevel.getPrecondition()£BuildingWithLevel.getProductedResource()£BuildingWithLevel.getProductedUnits()£BuildingWithLevel.getUnitsSpace()£BuildingWithLevel.getIsConstructible()£BuildingWithLevel.getIsDestructible()}
+{Si verifica che i dati dei Cost vengano caricati correttamente.£Cost.getRelativeTime()£Cost.getQuantityResource()£Cost.getRelativeTime()£Resource.getResourceName()}
+{Si verifica che DataFactory carichi correttamente i dati assegnati.£DataFactory.setResources()£DataFactory.setBuildings()£DataFactory.setUnits()£DataFactory.getResource()£DataFactory.getUnit()£DataFactory.getBuilding()}
+{Si verifica che ProductedResource crei correttamente i dati relativi alla risorsa prodotta.£ProductedResource.getMaxQuantity()£ProductedResource.getRelativeTime()£ProductedResource.getQuantity()£ProductedResource.getResource()}
+{Si verifica che QuantityResource gestisca correttamente le quantità di risorse assegnategli.£QuantityResource.getQuantity()£QuantityResource.getResource()}
+{Si verifica che Resource gestisca correttamente i dati relativi alla risorsa che rappresenta£Resource.getResourceName()£Resource.getKey()}
+{Si verifica che Unit gestisca correttamente i dati relativi all'unità che rappresenta£Unit.getKey()£Unit.getAttack()£Unit.getDefence()}
+{Si verifica che un oggetto Observable venga notificato correttamente alla modifica di un elemento assegnato.£Observable.addObserver()£Observable.removeObserver()£Observable.notify()}
+{Si verifica che AuthenticationData gestisca correttamente i dati di autenticazione di un utente.£AuthenticationData.getEmail()£AuthenticationData.getUser()}
+{Si verifica che BuildingPossession gestisca correttamente i dati di un edificio.£BuildigPossession.getBuilding()£BuildigPossession.getIsFinished()£BuildigPossession.getPosition()£BuildigPossession.getUnitInProgress()£BuildigPossession.getTime()£BuildigPossession.getKey()£BuildigPossession.getBuilding()}
+{Si verifica che OwnedResource gestisca correttamente i dati relativi ad una risorsa posseduta.£OwnedResource.getQuantity()£OwnedResource.getResource()£OwnedResource.getQuantity()}
+{Si verifica che Position gestisca correttamente i dati di posizionamento.£Position.getX()£Position.getY()}
+{Si verifica che UnitInProgress gestisca correttamente i dati di un'unità in costruzione.£UnitInProgress.getState()£UnitInProgress.getRemainingTime()£UnitInProgress.getUnit()£UnitInProgress.getState()}
+{Si verifica che UnitPossession gestisca correttamente i dati relativi le unità esistenti.£UnitPossession.getUnit()£UnitPossession.getQuantity()}
+{Si verifica che UserData gestisca correttamente i dati relativi ad un particolare utente.£UserData.getAuthenticationData()£UserData.getOwnedBuildings()£UserData.getOwnedUnits()£UserData.getOwnedResource()£UserData.getOwnedResources()£UserData.getUnitPossession()£UserData.getBuildingPossession()£UserData.getTotalUnitSpace()}
+{Si verifica che Context gestisca correttamente gli eventi mouse.£Context.onDrag()£Context.onDragStart()£Context.onDragEnd()£Context.onResize()£Context.onCick()£Context.onRightClick()£Context.setDrawArea()£Context.getInstance()}
+{Si verifica che Bound gestisca correttamente i dati relativi alla schermata di visualizzazione.£Bound.getInstance()£Bound.getHeight()£Bound.setHeight()£Bound.getWidth£Bound.setWidth()()£Bound.getTopLeftOffset()£Bound.setTopLeftOffset()£Bound.getMinTopLeftOffset()£Bound.setMinTopLeftOffset()£Bound.getMaxTopLeftOffset()£Bound.setMaxTopLeftOffset()}
+{Si verifica che Collection gestisca correttamente una collezione di oggetti.£Colletion.addGraphicObject()£Colletion.getLength()£Colletion.getGraphicObject()£Colletion.removeGraphicObject()£Colletion.addContextualFrame()£Colletion.getContextualFrame()}
+{Si verifica che Iterator gestisca correttamente un iteratore di un oggetto Collection.£Iterator.next()£Iterator.isDone()£Iterator.first()£Iterator.last()£Iterator.getItem()}
+{Si verifica che BuildModeFilter visualizzi correttamente il filtro di visualizzazione in modalità costruzione.£BuildModeFilter.draw()}
+{Si verifica che VoidFilter visualizzi correttamente il filtro di visualizzazione standard.£VoidFilter.draw()}
+{Si verifica che BuildingComponent gestisca correttamente la visualizzazione di un edificio.£BuildingComponent.draw()£VoidFilter.VoidFilter()£BuildModeFilter.BuildModeFilter()}
+{Si verifica che un generico elemento rappresentante la visualizzazione di un edificio ne gestisca correttamente i dati.£WizardTowerL1Shape.getShape()£WizardTowerL1Shape.getImage()}
+{Si verifica che un oggetto WorldComponentShapeFactory gestisca correttamente la visualizzazione dell'edificio che rappresenta.£WorldComponentFactory.getWOrldComponentShapeImg()}
+{Si verifica che un oggetto WorldComponentShapeImg gestisca correttamente i dati grafici dell'edificio che rappresenta.£WorldComponentShapeImg.getShape()£WorldComponentShapeImg.getImage()}
+{Si verifica che un oggetto GraphicObject gestisca correttamente i dati che lo rappresentano.£GraphicObject.getIsShiftable()£GraphicObject.getTopLeftOffset()£GraphicObject.shiftPosition()£GraphicObject.setIsShiftable()}
+{Si verifica che un oggetto GraphicObject cliccabile gestisca correttamente gli eventi.£GraphicObject.areYouClicked()£GraphicObject.shiftPosition()}
+{Si verifica che un oggetto Point2D gestisca correttamente il posizionamento di un oggetto sullo schermo.£Point2D.setX()£Point2D.getX()£Point2D.getY()£Point2D.setY()£Point2D.addPoint()£Point2D.subPoint()}
+{Si verifica che Shape gestisca correttamente i dati di posizionamento che lo riguardano.£Shape.addPoint()£Shape.isPointInside()£Shape.removePoint()}
+{Si verifica che un oggetto ButtonWidget gestisca correttamente il widget che lo rappresenta.£ButtonWidget.areYouClicked()£ButtonWidget.draw()}
+{Si verifica che un oggetto FrameWidget gestisca correttamente il widget che lo rappresenta.£FrameWidget.areYouClicked()£FrameWidget.draw()£FrameWidget.addWidget()}
+{Si verifica che un oggetto ImageWidget gestisca correttamente il widget che lo rappresenta.£ImageWidget.getHeight()£ImageWidget.getWidth()£ImageWidget.setOnClickEvent()£ImageWidget.onClick()£ImageWidget.setOnRightClickEvent()£ImageWidget.onRightClick()£ImageWidget.getTopLeftOffset()£ImageWidget.setEnabled()}
+{Si verifica che un oggetto TextWidget gestisca correttamente il widget che lo rapresenta.£TextWidget.draw()£TextWidget.areYouClicked()£TextWidget.getText()}
+{Si verifica che un oggetto rappresntato da un Widget gestisca correttamente gli eventi che lo riguardano.£Widget.setEnabled()£Widget.getEnabled()£Widget.setOnClickEvent()£Widget.getRightClickEvent()£Widget.getHeight()£Widget.getWidth()}
+{Si verifica che un oggetto ActionListener esegua correttamente i metodi richiamati sulla coda di azioni che contiene.£ActionListener.addAction()£ActionListener.performAction()}
+{Si verifica che un'azione BackToVillage ripristini correttamente i dati dell'utente.£BackToVillage.performAction()}
+{Si verifica che un'azione BuildConstruction costruisca il villaggio nella maniera corretta.£BuildConstruction.performAction()£BuildConstruction.setActionDatas()}
+{Si verifica che un'azione ChangePasswordAction cambi correttamente la password dell'utente.£ChangePasswordAction.performAction()}
+{Si verifica che un'azione CloseContextualMenu chiuda correttamente il menu contestuale corrente.£CloseContextualMenu.performAction()}
+{Si verifica che un'azione DeleteAccountAction elimini l'account dell'utente relativo.£DeleteAccountAction.performAction()}
+{Si verifica che un'azione DemolishBuilding demolisca correttamente l'edificio relativo.£DemolishBuilding.performAction()£DemolishBuilding.setActionDatas()}
+{Si verifica che un'azione DismissUnits rilasci correttamente le unità su cui è stata chiamata.£DismissUnits.performAction()£DismissUnits.setActionDatas()}
+{Si verifica che un'azione EnableRightClick abiliti correttamente la gestione dell'evento click destro del mouse.£EnableRightClick.performAction()}
+{Si verifica che un'azione HarvestResource raccolga correttamente le risorse dall'edificio selezionato.£HarvestResource.performAction()}
+{Si verifica che un'azione LoadAnotherUser cambi correttamente i dati relativi l'utente correntemente visualizzato.£LoadAnotherUser.performAction()}
+{Si verifica che un'azione LoadGeneralData carichi correttamente i dati globali di gioco.£LoadGeneralDatas.performAction()£LoadGeneralDatas.loadResources()£LoadGeneralDatas.loadUnits()£LoadGeneralDatas.loadCost()£LoadGeneralDatas.loadQuantityResource()£LoadGeneralDatas.loadBuildings()£LoadGeneralDatas.loadProductedResources()£LoadGeneralDatas.loadProductedUnits()£LoadGeneralDatas.loadBonus()£LoadGeneralDatas.setActionDatas()}
+{Si verifica che un'azione LoadPersonalData carichi correttamente i dati di gioco relativi un determinato utente.£LoadPersonalData.performAction()£LoadPersonalData.loadAuthenticationData()£LoadPersonalData.loadOwnedResources()£LoadPersonalData.loadOwnedUnits()£LoadPersonalData.loadOwnedBuildings()£LoadPersonalData.loadUnitInProgress()£LoadPersonalData.setActionDatas()}
+{Si verifica che un'azione Logout scolleghi correttamente l'utente corrente.£Logout.performAction()}
+{Si verifica che un'azione ReloadPageAction ricarichi correttamente la pagina.£ReloadPageAction.performAction()}
+{Si verifica che un'azione RemoveGraphicObjectAction rimuova correttamente un oggetto grafico attualmente visualizzato nell'area di gioco.£RemoveGraphicObject.performAction()}
+{Si verifica che un'azione RequestAttackUser inoltri correttamente la richiesta d'attacco verso un utente.£RequestAttackUser.performAction()}
+{Si verifica che un'azione RequestBuildConstruction inoltri correttamente la richiesta di costruzione di un edificio.£RequestBuildConstruction.performAction()}
+{Si verifica che un'azione RequestChangePassword inoltri correttamente la richiesta di cambio di password.£RequestChangePassword.performAction()}
+{Si verifica che un'azione RequestDeleteAccount inoltri correttamente la richiesta di elimininazione dell'account.£RequestDeleteAccount.performAction()}
+{Si verifica che un'azione RequestDemolishBuilding inoltri correttamente la richiesta di demolizione di un edificio.£RequestDemolishBuilding.performAction()}
+{Si verifica che un'azione RequestDismissUnits inoltri correttamente la richiesta di rimozione delle unità.£RequestDismissUnits.performAction()}
+{Si verifica che un'azione RequestHarvestResources inoltri correttamente la richiesta di raccolta risorse da un particolare edificio.£RequestHarvestResources.performAction()}
+{Si verifica che un'azione RequestLoadGeneralData inoltri correttamente la richiesta di caricare i dati globali di gioco.£RequestLoadGeneralData.performAction()}
+{Si verifica che un'azione RequestLoadPersonalData inoltri correttamente la richiesta di caricare i dati di gioco di un utente.£RequestLoadPersonalData.performAction()}
+{Si verifica che un'azione RequestTrainUnits inoltri correttamente la richiesta di produzione di un certo numero e tipo di unità.£RequestTrainUnits.performAction()}
+{Si verifica che un'azione RequestUpgradeBuilding inoltri correttamente la richiesta di miglioramento di un edificio.£RequestUpgradeBuilding.performAction()}
+{Si verifica che un'azione SetAllVoidFilter applichi correttamente il filtro di visualizzazione standard.£.performAction()}
+{Si verifica che un'azione SetBuildModeFilter applichi correttamente il filtro di visualizzazione di modalità costruzione.£SetBuildModeFilter.performAction()}
+{Si verifica che un'azione ShowAccountDeletedMenu visualizzi correttamente il menu di eliminazine account.£ShowAccountDeletedMenu.performAction()£ShowAccountDeletedMenu.setActionDatas()}
+{Si verifica che un'azione ShowAccountManagerMenu visualizzi correttamente il menu di gestione account dell'utente.£ShowAccountManagerMenu.performAction()}
+{Si verifica che un'azione ShowAnotherUserMenu visualizzi correttamente il menu per tornare al proprio villaggio.£ShowAnotherUserMenu.performAction()}
+{Si verifica che un'azione ShowAttackMenu visualizzi correttamente il menu di attacco verso un altro utente.£ShowAttackMenu.performAction()}
+{Si verifica che un'azione ShowAttackResultMenu visualizzi correttamente il menu che mostra il risultato dell'attacco.£ShowAttackResultMenu.performAction()}
+{Si verifica che un'azione ShowBuildConstructionMenu visualizzi correttamente il menu degli edifici che possono essere costruiti.£ShowBuildConstructionMenu.performAction()}
+{Si verifica che un'azione ShowBuildingContextualMenu visualizzi correttamente il menu contestuale di una costruzione.£ShowBuildingContextualMenu.performAction()}
+{Si verifica che un'azione ShowDemolishMenu visualizzi correttamente il menu di demolizione di un edificio.£ShowDemolishMenu.performAction()}
+{Si verifica che un'azione ShowDismissUnitMenu visualizzi correttamente il menu che permette la rimozione di unità.£ShowDismissUnitMenu.performAction()}
+{Si verifica che un'azione ShowInteractionMenu visualizzi correttamente il menu di interazione con il mondo di gioco e i vari utenti.£ShowInteractionMenu.performAction()}
+{Si verifica che un'azione ShowOperationFailureMenu visualizzi correttamente il menu di fallimento di un'operazione.£ShowOperationFailureMenu.performAction()}
+{Si verifica che un'azione ShowPasswordChangedMenu visualizzi correttamente il menu di conferma di cambiamento della password.£ShowPasswordChangedMenu.performAction()£ShowPasswordChangedMenu.setActionDatas()}
+{Si verifica che un'azione ShowResourceMenu visualizzi correttamente il menu di selezione delle risorse da donare a un altro utente.£ShowResourceMenu.performAction()}
+{Si verifica che un'azione ShowTileContextualMenu visualizzi correttamente il menu contestuale relativo ad una casella.£ShowTileContextualMenu.performAction()}
+{Si verifica che un'azione ShowTrainUnitMenu visualizzi correttamente il menu di addestramento delle unità.£ShowTrainUnitMenu.performAction()}
+{Si verifica che un'azione ShowUnitSelectionMenu visualizzi correttamente il menu di selezione dell'unità da costruire.£ShowUnitSelectionMenu.performAction()}
+{Si verifica che un'azione ShowUpgradeMenu visualizzi correttamente il menu di conferma di miglioramento di un edificio.£ShowUpgradeMenu.performAction()}
+{Si verifica che un'azione ShowUserListMenu visualizzi correttamente il menu di interazione con altri utenti.£ShowUserListMenu.performAction()£ShowUserListMenu.setActionDatas()}
+{Si verifica che un'azione StoleResources visualizzi correttamente la finestra di saccheggio di risorse da un edificio avversario.£StoleResources.performAction()}
+{Si verifica che un'azione TrainUnit addestri correttamente nuove unità.£TrainUnit.performAction()£TrainUnit.setActionDatas()}
+{Si verifica che un'azione UpgradeBuilding migliori correttamente un edificio.£UpgradeBuilding.performAction()£UpgradeBuilding.setActionDatas()}
+{Si verifica che i dati dell'utente vengano correttamente mantenuti.£BackupManager.getInstance()£BackupManager.saveDatas()£BackupManager.restoreDatas()}
+{Si verifica che venga creata correttamente la finestra di gestione del proprio account.£AccountManagerMenuFactory.buildMenu()}
+{Si verifica che venga creata correttamente la finestra di ritorno al proprio villaggio.£AnotherUserMenuFactory.buildMenu()}
+{Si verifica che venga creata correttamente la finestra dell'esito di uno scontro.£AttackResultMenuFactory.buildMenu()£AttackResultMenuFactory.createWinWidget()£AttackResultMenuFactory.createLostWidget()}
+{Si verifica che venga creato correttamente il menu contestuale relativo ad un edificio.£BuildingContextualMenuFactory.buildMenu()£BuildingContextualMenuFactory.createUpgradeWidget()£BuildingContextualMenuFactory.buildMenu()£BuildingContextualMenuFactory.createDemolishWidget()£BuildingContextualMenuFactory.createTraiUnitsWidget()£BuildingContextualMenuFactory.createTrainUnitsQueueWidget()£BuildingContextualMenuFactory.createProductedResourcesWidget()£BuildingContextualMenuFactory.createPreconditionsWidget()£BuildingContextualMenuFactory.createRemainingTimeWidget()}
+{Si verifica che venga creato correttamente il menu di conferma di una generica azione.£ConfirmMenuFactory.buildMenu()}
+{Si verifica che venga creato correttamente un generico menu interattivo.£InteractionMenuFactory.buildMenu()}
+{Si verifica che venga creata correttamente una finestra di visualizzazione di una notifica.£NotifyMenuFactory.buildMenu()}
+{Si verifica che venga creata correttamente la finestra di visualizzazione delle risorse.£ResourceMenuFactory.buildMenu()£ResourceMenuFactory.createOwnedResourceWidget()£ResourceMenuFactory.createUnitPossessionWidget()£ResourceMenuFactory.createUserWidget()}
+{Si verifica che venga creato correttamente il menu di costruzione di un edificio.£TileContextualMenuFactory.buildMenu()£TileContextualMenuFactory.createConstructionWidgets()£TileContextualMenuFactory.createProductedResourcesWidget()}
+{Si verifica che venga creato correttamente il menu di addestramento di unità.£UnitSelectionMenu.buildMenu()£UnitSelectionMenu.createUnitSelectionWidgets()£UnitSelectionMenu.createCloseFrameAction()}
+{Si verifica che venga creata correttamente la lista degli altri giocatori connessi.£UserListMenuFactory.buildMenu()}
+{Si verifica che i dati dell'utente di cui si sta visualizzando il villaggio siano correttamente accessibili.£UserDataManager.getInstance()£UserDataManager.getUserData()£UserDataManager.setUserData()}
+{Si verifica che sia possibile interagire correttamente con una casella disegnata sulla mappa.£TileComponent.onClick()£TileComponent.onRightClick()£TileComponent.getShape()£TileComponent.getWorldComponentShape()£TileComponent.getPosition()}
